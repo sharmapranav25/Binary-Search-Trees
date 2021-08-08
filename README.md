@@ -4,16 +4,18 @@ the structure of data affects performance, especially when it comes to the time 
 
     import colorama
     from colorama import Fore
+node class
 
     class Node:
         def __init__(self, data):
-            self.data= data
-            self.next= None
-            self.prev= None
+            self.data= data #store Data
+            self.next= None #next to the data
+            self.prev= None #prev to the data
 
 
         def value(self):
             return (self.data)
+Our BST
 
     class Tree:
         def __init__(self):
@@ -23,7 +25,8 @@ the structure of data affects performance, especially when it comes to the time 
             NewNode= Node(NodeVal)
 
 
-            #funtion if value is to the left of head root
+funtion of class Tree if value is to the Left of head root
+
             def left(NewNode, root):
 
                 if root.prev is None: #will add node when node to the legt is empty
@@ -44,7 +47,10 @@ the structure of data affects performance, especially when it comes to the time 
 
 
 
-            #funtion if value is to the right of head root
+funtion of class Tree if value is to the right of head root
+
+
+
             def right(NewNode, root):
 
                 if root.next is None:
@@ -63,6 +69,7 @@ the structure of data affects performance, especially when it comes to the time 
                 if NewNode.value() < newRoot.value():
                     left(NewNode, newRoot)
 
+Our BST continued
 
             #if the Tree is empty
             if self.root is None:
@@ -83,9 +90,9 @@ the structure of data affects performance, especially when it comes to the time 
             if NewNode.value() > self.root.value():
                 right(NewNode, self.root)
 
+Test cases
 
-
-    if True:
+    if True: # will always execute
 
         testcases= Tree()
 
@@ -226,4 +233,50 @@ the structure of data affects performance, especially when it comes to the time 
             print(f'{Fore.GREEN}Test 16 passed!')
         else:
             print(f'{Fore.RED}Test 16 failed!')
+            
+            
+            
+            
+            
+            
+            
+            
+ output
+ 
+         if __name__ == '__main__':
+
+
+            bst = Tree()                  # 10
+            bst.add(10)        #   5                 15
+            bst.add(15)  #   2.5      7.5      12.5      27.5
+            bst.add(5)  #...
+            bst.add(12.5)
+            bst.add(7.5)
+            bst.add(2.5)
+            bst.add(17.5)
+            bst.add(14)
+            bst.add(11)
+
+
+
+            print(f'{Fore.RESET}Root:' , bst.root.value())
+            print("next of root:", bst.root.next.value())
+            print("previous of root:", bst.root.prev.value())
+            print('next of prev.root:', bst.root.prev.next.value())
+            print('previous of prev.root:', bst.root.prev.prev.value())
+            print('next of next.root:', bst.root.next.next.value())
+            print('previous of next.root:', bst.root.next.prev.value())
+
+
+            print( f'''                                                        {bst.root.value()}
+
+
+                                     {bst.root.prev.value()}                                                       {bst.root.next.value()}      
+
+
+                 {bst.root.prev.prev.value()}                                  {bst.root.prev.next.value()}                 {bst.root.next.prev.value()}                                 {bst.root.next.next.value()}
+
+
+                                                                       {bst.root.next.prev.prev.value()}       {bst.root.next.prev.next.value()}
+                                                                       ''')
 
