@@ -233,6 +233,24 @@ Test cases
             print(f'{Fore.GREEN}Test 16 passed!')
         else:
             print(f'{Fore.RED}Test 16 failed!')
+output
+
+    Test 1 passed!
+    Test 2 passed!
+    Test 3 passed!
+    Test 4 passed!
+    Test 5 passed!
+    Test 6 passed!
+    Test 7 passed!
+    Test 8 passed!
+    Test 9 passed!
+    Test 10 passed!
+    Test 11 passed!
+    Test 12 passed!
+    Test 13 passed!
+    Test 14 passed!
+    Test 15 passed!
+    Test 16 passed!
             
             
             
@@ -240,8 +258,7 @@ Test cases
             
             
             
-            
- output
+Run 
  
          if __name__ == '__main__':
 
@@ -280,3 +297,22 @@ Test cases
                                                                        {bst.root.next.prev.prev.value()}       {bst.root.next.prev.next.value()}
                                                                        ''')
 
+Output
+
+            Root: 10
+            next of root: 15
+            previous of root: 5
+            next of prev.root: 7.5
+            previous of prev.root: 2.5
+            next of next.root: 17.5
+            previous of next.root: 12.5
+                                                                    10
+
+
+                                         5                                                       15      
+
+
+                     2.5                                  7.5                 12.5                                 17.5
+
+
+                                                                           11       14
